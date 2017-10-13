@@ -68,7 +68,6 @@ namespace TwitterStat
             authRequest.Headers.Add("Accept-Encoding", "gzip");
 
             WebResponse authResponse = authRequest.GetResponse();
-            // deserialize into an object
             TwitAuthenticateResponse twitAuthResponse;
             using (authResponse)
             {
