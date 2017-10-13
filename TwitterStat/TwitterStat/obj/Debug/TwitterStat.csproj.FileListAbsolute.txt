@@ -1,0 +1,9 @@
+C:\Users\andrey_t\source\repos\TwitterStat\TwitterStat\bin\Debug\TwitterStat.exe.config
+C:\Users\andrey_t\source\repos\TwitterStat\TwitterStat\bin\Debug\TwitterStat.exe
+C:\Users\andrey_t\source\repos\TwitterStat\TwitterStat\bin\Debug\TwitterStat.pdb
+C:\Users\andrey_t\source\repos\TwitterStat\TwitterStat\obj\Debug\TwitterStat.csprojResolveAssemblyReference.cache
+C:\Users\andrey_t\source\repos\TwitterStat\TwitterStat\obj\Debug\TwitterStat.csproj.CoreCompileInputs.cache
+C:\Users\andrey_t\source\repos\TwitterStat\TwitterStat\obj\Debug\TwitterStat.exe
+C:\Users\andrey_t\source\repos\TwitterStat\TwitterStat\obj\Debug\TwitterStat.pdb
+C:\Users\andrey_t\source\repos\TwitterStat\TwitterStat\bin\Debug\Newtonsoft.Json.dll
+C:\Users\andrey_t\source\repos\TwitterStat\TwitterStat\bin\Debug\Newtonsoft.Json.xml
