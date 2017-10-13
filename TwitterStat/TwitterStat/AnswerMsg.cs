@@ -12,9 +12,9 @@ namespace TwitterStat
         public virtual char Letter { get; set; }
         public virtual int Count { get; set; }
 
-        public virtual double Rate(int messageValue)
+        public virtual string Rate(int messageValue)
         {
-            var result= (double) Count / messageValue;
+            var result= $"{(double) Count / messageValue:0.#####}";
             return result;
         }
     }

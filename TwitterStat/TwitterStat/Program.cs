@@ -2,7 +2,6 @@
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Security.Policy;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web.Script.Serialization;
@@ -30,7 +29,7 @@ namespace TwitterStat
                 var responce = StealTwits(username);
                 if (responce != null)
                 {
-                    FrequencyAnalysis(responce);
+                    AnalyseFrequency(responce, username);
                 }
                 else
                 {
@@ -38,7 +37,7 @@ namespace TwitterStat
                 }
                 Console.WriteLine("Посмотрим еще? \nВведите +, если хотите еше посмотреть");
                 var selector = Console.ReadLine();
-                isGame = selector == "+" ? true : false;
+                isGame = selector == "+";
             }
 
         }
@@ -46,14 +45,14 @@ namespace TwitterStat
         /// Производим частотный анализ
         /// </summary>
         /// <param name="text"></param>
-        public static void FrequencyAnalysis(string text)
+        public static void AnalyseFrequency(string text,string username)
         {
             text = text.ToLower();
             var regex = new Regex(@"[^а-яa-z]");
             var res = "";
             var correctText = regex.Replace(text, res);
             var freqChars = correctText.GroupBy(l => l).Select(s => new AnswerMsg { Letter = s.Key, Count = s.Count() }).OrderBy(o => o.Letter).ToList();
-            Console.WriteLine("{");
+            Console.WriteLine($"@{username}, статистика для пяти последних твитов: ","\n{");
             foreach (var symbal in freqChars)
             {
                 Console.WriteLine($"    {symbal.Letter} : '{symbal.Rate(text.Length)}',");
